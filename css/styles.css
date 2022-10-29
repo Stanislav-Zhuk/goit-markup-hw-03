@@ -1,6 +1,5 @@
 :root {
-
-/* Основні кольори */
+	/* Основні кольори */
 
 	--primari-text-color: #212121;
 	--secondary-text-color: #757575;
@@ -11,8 +10,6 @@
 	--hero-button-activ: #188ce8;
 	--bgd-color-footer: #2f303a;
 	--adress-footer-color: rgba(255, 255, 255, 0.6);
-
-
 }
 
 body {
@@ -39,7 +36,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+li {
 	margin: 0;
 }
 
@@ -190,6 +188,7 @@ header {
 
 .features {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .features .item + .item {
@@ -248,13 +247,14 @@ header {
 
 /* Робота */
 
-.work .item {
-	display: inline-block;
+.work {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 /* переробити! має бути 30px */
 
-.work .item + .item {
+.work-list .item + .item {
 	padding-left: 26px;
 }
 
@@ -295,12 +295,15 @@ header {
 }
 
 .team-text {
-	margin-bottom: 30px;
-
 	font-size: 16px;
 	line-height: 1.19;
 
 	color: var(--secondary-text-color);
+}
+
+.team-description {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 /* Підвал */
@@ -340,7 +343,6 @@ footer {
 	margin: 0;
 	padding-top: 60px;
 	padding-bottom: 20px;
-
 }
 
 .mail {
@@ -356,7 +358,14 @@ footer {
 /* Проєкти Портфоліо */
 
 .section-project {
+	margin-top: 94px;
+	margin-bottom: 94px;
+
 	background-color: var(--primari-white-color);
+}
+
+.heder-project {
+	border-bottom: 1px solid #ececec;
 }
 
 /* Кнопки */
@@ -391,11 +400,14 @@ footer {
 
 .button {
 	display: block;
-	margin-top: 94px;
 	margin-bottom: 50px;
 	margin-right: 8px;
 	padding: 6px 22px;
 	min-width: 73px;
+}
+
+.button:last-child {
+	margin-right: 0;
 }
 
 /* Проєкти */
@@ -425,9 +437,8 @@ footer {
 
 .card {
 	display: inline-block;
+}
 
-	margin-right: 30px;
-	margin-bottom: 30px;
-
+.card-border {
 	border: 1px solid #eeeeee;
 }
