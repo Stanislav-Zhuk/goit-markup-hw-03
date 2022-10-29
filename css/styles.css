@@ -1,6 +1,5 @@
 :root {
 	/* Основні кольори */
-
 	--primari-text-color: #212121;
 	--secondary-text-color: #757575;
 	--primari-white-color: #ffffff;
@@ -10,6 +9,10 @@
 	--hero-button-activ: #188ce8;
 	--bgd-color-footer: #2f303a;
 	--adress-footer-color: rgba(255, 255, 255, 0.6);
+
+	/* Інше */
+	--indent: 30px;
+	--items: 3;
 }
 
 body {
@@ -48,7 +51,21 @@ li {
 	margin-right: auto;
 	margin-left: auto;
 
-	outline: 1px solid rebeccapurple;
+	/* outline: 1px solid rebeccapurple; */
+}
+
+/* Базові стилі */
+
+.card-set {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--indent);
+}
+
+.card-set-item {
+	flex-basis: calc(
+		(100% - var(--indent) * (var(--items) - 1)) / (var(--items))
+	);
 }
 
 /* Шапка */
@@ -187,12 +204,7 @@ header {
 /* Особливості */
 
 .features {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.features .item + .item {
-	margin-left: 30px;
+	--items: 4;
 }
 
 .section-features,
@@ -203,7 +215,7 @@ header {
 }
 
 .section-features {
-	margin-top: 94px;
+	padding-top: 94px;
 }
 
 .visually-hidden {
@@ -247,21 +259,10 @@ header {
 
 /* Робота */
 
-.work {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-/* переробити! має бути 30px */
-
-.work-list .item + .item {
-	padding-left: 26px;
-}
-
 /* Наша команда */
 
 .team {
-	display: flex;
+	--items: 4;
 }
 
 .section-team {
@@ -274,16 +275,10 @@ header {
 }
 
 .team-members {
-	display: block;
-
 	background-color: var(--primari-white-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
-}
-
-.team-members + .team-members {
-	margin-left: 30px;
 }
 
 .team-title {
@@ -302,8 +297,8 @@ header {
 }
 
 .team-description {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 /* Підвал */
@@ -358,8 +353,8 @@ footer {
 /* Проєкти Портфоліо */
 
 .section-project {
-	margin-top: 94px;
-	margin-bottom: 94px;
+	padding-top: 94px;
+	padding-bottom: 94px;
 
 	background-color: var(--primari-white-color);
 }
@@ -395,25 +390,25 @@ footer {
 
 .portfolio-button {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .button {
-	display: block;
-	margin-bottom: 50px;
 	margin-right: 8px;
+	margin-bottom: 50px;
 	padding: 6px 22px;
 	min-width: 73px;
 }
 
-.button:last-child {
+/* .button:last-child {
 	margin-right: 0;
-}
+} */
 
 /* Проєкти */
 
 .project-title {
-	margin: 20px 24px 4px 24px;
+	margin-bottom: 4px;
 
 	font-weight: 700;
 	font-size: 18px;
@@ -425,20 +420,15 @@ footer {
 }
 
 .project-text {
-	margin-right: 24px;
-	margin-left: 24px;
-	margin-bottom: 20px;
-
 	font-size: 16px;
 	line-height: 1.87;
 
 	color: var(--secondary-text-color);
 }
 
-.card {
-	display: inline-block;
-}
-
 .card-border {
+	padding: 20px 24px;
+
 	border: 1px solid #eeeeee;
+	border-top: none;
 }
