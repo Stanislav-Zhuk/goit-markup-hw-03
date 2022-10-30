@@ -54,6 +54,11 @@ li {
 	/* outline: 1px solid rebeccapurple; */
 }
 
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
 /* Базові стилі */
 
 .card-set {
@@ -156,13 +161,15 @@ header {
 /* Герой */
 
 .hero {
+	padding-top: 200px;
+	padding-bottom: 200px;
+
 	background-color: #2f303a;
 	text-align: center;
 }
 
 .hero-title {
 	margin-bottom: 30px;
-	padding-top: 200px;
 
 	font-weight: 900;
 	font-size: 44px;
@@ -175,9 +182,7 @@ header {
 }
 
 .hero-button {
-	display: inline-block;
 	padding: 10px 32px;
-	margin-bottom: 200px;
 
 	font-family: inherit;
 	font-weight: 700;
@@ -190,7 +195,7 @@ header {
 	background-color: var(--accent-color);
 
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border: 0 transparent;
+	border: none;
 	border-radius: 4px;
 
 	cursor: pointer;
@@ -207,9 +212,8 @@ header {
 	--items: 4;
 }
 
-.section-features,
-.section-work {
-	padding-bottom: 94px;
+.section-features {
+	padding-bottom: 0;
 
 	background-color: var(--primari-white-color);
 }
@@ -259,6 +263,10 @@ header {
 
 /* Робота */
 
+.section-work {
+	background-color: var(--primari-white-color);
+}
+
 /* Наша команда */
 
 .team {
@@ -266,9 +274,6 @@ header {
 }
 
 .section-team {
-	padding-top: 94px;
-	padding-bottom: 94px;
-
 	background-color: var(--bgd-white-color);
 
 	text-align: center;
@@ -353,9 +358,6 @@ footer {
 /* Проєкти Портфоліо */
 
 .section-project {
-	padding-top: 94px;
-	padding-bottom: 94px;
-
 	background-color: var(--primari-white-color);
 }
 
@@ -386,6 +388,8 @@ footer {
 .portfolio-button .button:focus {
 	color: var(--primari-white-color);
 	background-color: var(--accent-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-button {
